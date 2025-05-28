@@ -32,7 +32,6 @@ const QuestionnaireBase: React.FC<QuestionnaireBaseProps> = ({ title, content, o
         (trimmedLine.endsWith('?') || trimmedLine.endsWith(':')) &&
         trimmedLine.length > 5 &&
         !trimmedLine.toLowerCase().includes('questionnaire') &&
-        !trimmedLine.toLowerCase().includes('information') &&
         !trimmedLine.toLowerCase().includes('overview') &&
         !trimmedLine.toLowerCase().includes('section')
       ) {
@@ -60,7 +59,6 @@ const QuestionnaireBase: React.FC<QuestionnaireBaseProps> = ({ title, content, o
               (trimmedLine.endsWith('?') || trimmedLine.endsWith(':')) &&
               trimmedLine.length > 5 &&
               !trimmedLine.toLowerCase().includes('questionnaire') &&
-              !trimmedLine.toLowerCase().includes('information') &&
               !trimmedLine.toLowerCase().includes('overview') &&
               !trimmedLine.toLowerCase().includes('section')
             ) {
@@ -81,17 +79,13 @@ const QuestionnaireBase: React.FC<QuestionnaireBaseProps> = ({ title, content, o
               );
             }
 
-            if (trimmedLine) {
-              return (
-                <div key={uniqueKey} style={{ marginBottom: '1rem' }}>
-                  <p className="cds--body-long-01" style={{ color: '#525252' }}>
-                    {trimmedLine}
-                  </p>
-                </div>
-              );
-            }
-
-            return null;
+            return (
+              <div key={uniqueKey} style={{ marginBottom: '1rem' }}>
+                <p className="cds--body-long-01" style={{ color: '#525252' }}>
+                  {trimmedLine}
+                </p>
+              </div>
+            );
           })}
         </div>
       );
