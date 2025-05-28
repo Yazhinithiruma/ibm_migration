@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   HeaderContainer,
@@ -9,15 +8,16 @@ import {
   OverflowMenuItem,
   Button
 } from '@carbon/react';
-import { User } from '@carbon/icons-react';
+import { User, Menu } from '@carbon/icons-react'; // Import Menu icon
 import { useNavigate } from 'react-router-dom';
 
 interface DashboardNavProps {
   onNavigate: (page: string) => void;
   currentPage: string;
+  onToggleSidebar: () => void;  // NEW prop for toggle
 }
 
-const DashboardNav: React.FC<DashboardNavProps> = ({ onNavigate, currentPage }) => {
+const DashboardNav: React.FC<DashboardNavProps> = ({ onNavigate, currentPage, onToggleSidebar }) => {
   const navigate = useNavigate();
   
   const handleLogout = () => {
@@ -34,6 +34,14 @@ const DashboardNav: React.FC<DashboardNavProps> = ({ onNavigate, currentPage }) 
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
           <Header aria-label="Migration Dashboard">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              {/* Sidebar toggle button */}
+              <HeaderGlobalAction
+                aria-label="Toggle sidebar"
+                onClick={onToggleSidebar}
+              >
+                <Menu size={24} />
+              </HeaderGlobalAction>
+
               <Button
                 kind="ghost"
                 onClick={handleLogoClick}

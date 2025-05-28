@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import DashboardNav from '../components/DashboardNav';
 import HomePage from '../components/HomePage';
@@ -14,6 +13,11 @@ import IBMDataReplicationQuestionnaire from '../components/questionnaires/IBMDat
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState('home');
+  const [sidebarOpen, setSidebarOpen] = useState(true);  // Sidebar open state
+
+  const handleToggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
   const renderCurrentPage = () => {
     switch (currentPage) {
@@ -43,11 +47,13 @@ const Index = () => {
       <DashboardNav 
         onNavigate={setCurrentPage} 
         currentPage={currentPage}
+        onToggleSidebar={handleToggleSidebar}  // Pass toggle handler
       />
       <div style={{ display: 'flex', flex: 1 }}>
         <SidebarNav 
           onNavigate={setCurrentPage}
           currentPage={currentPage}
+          isOpen={sidebarOpen}  // Pass sidebar open state
         />
         <main style={{ flex: 1, backgroundColor: '#f4f4f4' }}>
           {renderCurrentPage()}
