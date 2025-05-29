@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Grid,
@@ -59,7 +58,6 @@ const Footer: React.FC = () => {
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   <li style={{ marginBottom: '0.5rem' }}><Link href="#" style={{ color: 'white' }}>Database Migration</Link></li>
                   <li style={{ marginBottom: '0.5rem' }}><Link href="#" style={{ color: 'white' }}>DataStage Migration</Link></li>
-                  <li style={{ marginBottom: '0.5rem' }}><Link href="#" style={{ color: 'white' }}>AI Analytics</Link></li>
                 </ul>
               </Column>
 
@@ -68,9 +66,8 @@ const Footer: React.FC = () => {
                   About Us
                 </h5>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: '0.5rem' }}><Link href="#" style={{ color: 'white' }}>Company</Link></li>
-                  <li style={{ marginBottom: '0.5rem' }}><Link href="#" style={{ color: 'white' }}>Careers</Link></li>
-                  <li style={{ marginBottom: '0.5rem' }}><Link href="#" style={{ color: 'white' }}>News</Link></li>
+                  <li style={{ marginBottom: '0.5rem' }}><Link href="https://www.ibm.com/in-en" style={{ color: 'white' }}>Company</Link></li>
+                  <li style={{ marginBottom: '0.5rem' }}><Link href="https://www.ibm.com/in-en/careers" style={{ color: 'white' }}>Careers</Link></li>
                 </ul>
               </Column>
 
@@ -81,7 +78,6 @@ const Footer: React.FC = () => {
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   <li style={{ marginBottom: '0.5rem' }}><Link href="https://www.ibm.com/privacy" style={{ color: 'white' }}>Privacy Policy</Link></li>
                   <li style={{ marginBottom: '0.5rem' }}><Link href="https://www.ibm.com/legal" style={{ color: 'white' }}>Terms & Conditions</Link></li>
-                  <li style={{ marginBottom: '0.5rem' }}><Link href="#" style={{ color: 'white' }}>Cookie Policy</Link></li>
                 </ul>
               </Column>
               
@@ -142,7 +138,7 @@ const Footer: React.FC = () => {
               
               <Column lg={16} md={8} sm={4} style={{ marginTop: '2rem' }}>
                 <p className="cds--body-short-01" style={{ color: 'white', textAlign: 'center' }}>
-                  © 2024 IBM Corporation. All rights reserved.
+                  © 2025 IBM Corporation. All rights reserved.
                 </p>
               </Column>
             </Grid>
